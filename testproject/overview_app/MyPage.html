@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block content %}
+    {% comment %} include the form {% endcomment %}
+    {% formfields %}
+    <!--  Display a variable specified in vars_for_template -->
+    Completion Code: {{ completion_code }} <br />
+    {% comment %} Display a variable from the models.py{% endcomment %}
+    Base Payment: {{ Constants.base_payment }}  <br />
+    <!-- Any text that is written here is displayed on the website-->
+    Hello World!
+    {% comment %} A Table in HTML {% endcomment %}
+<table>
+    <tr>
+        <td id="first_cell"> Column 1</td>
+        <td id="second_cell"> Column 2</td>
+    </tr>
+    <tr>
+        <td>First Entry</td>
+        <td>Second Entry</td>
+    </tr>
+</table>
+    {% next_button %}
+{% endblock %}
+{% block app_styles %}
+<style>
+    table {
+        /* define the style for all text in tables */
+        color: red;
+        border: 1px solid black;
+    }
+    /* overwrite the default color for the first cell */
+    #first_cell {
+        color: blue;
+    }
+</style>
+{% endblock %}
