@@ -7,10 +7,16 @@ SESSION_CONFIGS = [
         display_name="multiply by a constant",
         app_sequence=['multiply_app'],
         num_demo_participants=3,
-    )
+    ),
     # dict(
     #     name='overview_app', app_sequence=['survey', 'payment_info'], num_demo_participants=1
     # ),
+    dict(
+        name='real_effort_numbers',
+        display_name="Add up two numbers",
+        app_sequence=['real_effort_numbers'],
+        num_demo_participants=3,
+    )
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs

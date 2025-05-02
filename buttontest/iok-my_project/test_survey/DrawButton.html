@@ -1,0 +1,25 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Title{{ endblock }}
+
+{{ block content }}
+
+{{ formfields }}
+<button type="button" onclick="drawWorker()">
+    Click this button
+</button>
+<p>&nbsp;</p>
+
+<div id="results">&nbsp;</div>
+
+{{ next_button }}
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+function drawWorker() {
+	jQuery("#results").append("A click"); 
+
+}
+</script>
+{{ endblock }}
